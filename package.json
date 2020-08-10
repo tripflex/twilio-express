@@ -1,17 +1,21 @@
 {
-    "name":"twilio-express",
-    "version":"0.0.1",
-    "private":false,
-    "scripts":{
-        "start":"node app"
-    },
-    "dependencies":{
-        "express":"3.0.3",
-        "ejs":"*",
-        "twilio":"git://github.com/kwhinnery/twilio-node.git"
-    },
-    "engines": {
-        "node": "0.8.x",
-        "npm": "1.1.x"
-    }
+  "name": "twilio-express",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "start": "node app",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "dependencies": {
+    "express": "3.0.3",
+    "ejs": "*",
+    "twilio": "git://github.com/kwhinnery/twilio-node.git",
+    "snyk": "^1.372.0"
+  },
+  "engines": {
+    "node": "0.8.x",
+    "npm": "1.1.x"
+  },
+  "snyk": true
 }
